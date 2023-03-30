@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(to bottom, #000, #0e001b);
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: transparent;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 20px;
+  background-color: transparent;
+}
+
+.logo a {
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+ul {
+  display: flex;
+  gap: 30px;
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul li a {
+  display: inline;
+  line-height: 30px;
+  font-size: 15px;
+  transition: all .3s ease;
+  padding: 8px 14px;
+  border-radius: 50px;
+}
+
+.active, ul li a:hover {
+  background: #fff;
+  color: #000;
+}
+
+.active:hover {
+  scale: 1.5;
+}
+
+/* Main */
+
+main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  transition: background .3s ease;
+}
+
+main::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background: linear-gradient(to top,#000, transparent);
+}
+
+main img {
+  position: absolute;
+  width: 100%;  
+  height: 100%;
+  object-fit: cover;
+}
+
+.moon {
+  mix-blend-mode: screen;
+  top: 80px;
+}
+
+.content {
+  color: #fff;
+  padding: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.content h2 {
+  font-size: 30px;
+}
+
+.content h2, .content p {
+  margin: 20px;
+  line-height: 29px;
+}
